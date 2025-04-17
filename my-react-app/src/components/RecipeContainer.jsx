@@ -1,7 +1,6 @@
 import Recipe from "./Recipe.jsx";
-import { recipes } from "../data/data.js"; 
 
-const RecipeContainer = () => {
+const RecipeContainer = ({recipes}) => {
     return (
         <div className="recipe-container">
             {
