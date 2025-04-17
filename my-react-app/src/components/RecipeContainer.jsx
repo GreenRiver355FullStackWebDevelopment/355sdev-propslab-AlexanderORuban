@@ -1,5 +1,5 @@
 import Recipe from "./Recipe.jsx";
-import { recipes } from "../data.js"; 
+import { recipes } from "../data/data.js"; 
 
 const RecipeContainer = () => {
     return (
