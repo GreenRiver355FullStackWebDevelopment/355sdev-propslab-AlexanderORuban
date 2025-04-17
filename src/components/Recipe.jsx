@@ -1,16 +1,24 @@
+import { Typography} from '@mui/material';
+import RestaurantIcon from '@mui/icons-material/Restaurant';
+
 const Recipe = ({ recipe: { name, ingredients, instructions, optionalGlaze } }) => {
     return (
         <div>
-            <h1>Recipe Name: {name}</h1>
+            <Typography variant='h1' sx={{color: 'crimson'}}>
+                Recipes:
+                <RestaurantIcon sx={{ marginLeft: 1, fontSize: '70px' }} />
+            </Typography> 
 
-            <h2>Ingredients:</h2>
+            <Typography variant='h2' sx={{color: 'royalblue'}}>{name}</Typography>
+
+            <Typography variant='h3' sx={{color: 'mediumseagreen'}}>Ingredients:</Typography>
             <ul>
                 {ingredients.map((item, index) => (
-                    <li key={index}>{item}</li>
+                    <li key={index} >{item}</li>
                 ))}
             </ul>
 
-            <h2>Instructions:</h2>
+            <Typography variant='h3' sx={{color: 'mediumseagreen'}}>Instructions:</Typography>
             <ol>
                 {instructions.map((step, index) => (
                     <li key={index}>{step}</li>
@@ -19,16 +27,16 @@ const Recipe = ({ recipe: { name, ingredients, instructions, optionalGlaze } }) 
 
             {optionalGlaze && (
                 <div className="optionalGlaze">
-                    <h2>Optional Glaze: {optionalGlaze.name}</h2>
+                    <Typography variant='h4' sx={{color: 'sienna'}}>Optional Glaze: {optionalGlaze.name}</Typography>
 
-                    <h3>Glaze Ingredients:</h3>
+                    <Typography variant='h4' sx={{color: 'slateblue'}}>Glaze Ingredients:</Typography>
                     <ul>
                         {optionalGlaze.ingredients.map((item, index) => (
                             <li key={index}>{item}</li>
                         ))}
                     </ul>
 
-                    <h3>Glaze Instructions:</h3>
+                    <Typography variant='h4' sx={{color: 'forestgreen'}}>Glaze Instructions:</Typography>
                     <ol>
                         {optionalGlaze.instructions.map((step, index) => (
                             <li key={index}>{step}</li>
