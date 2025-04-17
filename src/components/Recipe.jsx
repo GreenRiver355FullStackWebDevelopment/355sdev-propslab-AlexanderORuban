@@ -25,7 +25,7 @@ const Recipe = ({ recipe: { name, ingredients, instructions, optionalGlaze } }) 
                 ))}
             </ol>
 
-            {optionalGlaze && (
+            {optionalGlaze && ( //JSX if statement on whether or not to render the optionalGlaze that some recipes include
                 <div className="optionalGlaze">
                     <Typography variant='h4' sx={{color: 'sienna'}}>Optional Glaze: {optionalGlaze.name}</Typography>
 
